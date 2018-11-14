@@ -1,0 +1,11 @@
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\bin\Debug\netcoreapp2.0\RecommendationSystem.deps.json
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\bin\Debug\netcoreapp2.0\RecommendationSystem.runtimeconfig.json
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\bin\Debug\netcoreapp2.0\RecommendationSystem.runtimeconfig.dev.json
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\bin\Debug\netcoreapp2.0\RecommendationSystem.dll
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\bin\Debug\netcoreapp2.0\RecommendationSystem.pdb
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.csprojResolveAssemblyReference.cache
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.csproj.CoreCompileInputs.cache
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.AssemblyInfoInputs.cache
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.AssemblyInfo.cs
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.dll
+C:\Users\galnd\source\repos\RecommendationSystem\RecommendationSystem\obj\Debug\netcoreapp2.0\RecommendationSystem.pdb

@@ -1,0 +1,57 @@
+<div style="text-align:center">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span> Welcome to {{ title }}!</span>
+      <span class="spacer"></span>
+      <span>
+        <mat-form-field *ngIf="users" >
+          <mat-select  (selectionChange)="showRatingsForCurrentUser()"placeholder="User" [(value)]="currentUser">
+            <mat-option  *ngFor="let user of (users || null)" [value]="user">
+              {{user.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+<div class="content">
+<mat-grid-list cols="2" rowHeight="fit" class="content">
+  <mat-grid-tile>
+    <div *ngIf="ratings">
+   <!-- <ol>
+      <li *ngFor="let rating of ratings" > {{ rating.filmName}} {{ rating.score}} {{ rating.userID}} </li>
+    </ol> -->
+      <h2 class="mat-h2" *ngIf="currentUser">{{currentUser.name}}'s rated films</h2>
+      <mat-card *ngFor="let rating of ratings" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{rating.filmName}}</mat-card-title>
+          <mat-card-subtitle>You scored:{{rating.score}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div *ngIf="recommendations">
+      <!-- <ol>
+         <li *ngFor="let rating of ratings" > {{ rating.filmName}} {{ rating.score}} {{ rating.userID}} </li>
+       </ol> -->
+      <h2 class="mat-h2" *ngIf="currentUser">{{currentUser.name}}'s recommendations</h2>
+      <mat-card *ngFor="let recommendation of recommendations" class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{recommendation.filmName}}</mat-card-title>
+          <mat-card-subtitle>Recommendation Score:{{recommendation.totalSum_sim}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+
+
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+
+
+
