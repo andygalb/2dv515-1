@@ -1,5 +1,6 @@
 .spacer {
   flex: 1 1 auto;
+  margin:0 10px;
 }
 
 .example-card {

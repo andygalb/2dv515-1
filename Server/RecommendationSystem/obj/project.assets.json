@@ -13132,11 +13132,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\galnd\\source\\repos\\RecommendationSystem\\RecommendationSystem\\RecommendationSystem.csproj",
+      "projectUniqueName": "C:\\Users\\galnd\\Desktop\\Reco\\Server\\RecommendationSystem\\RecommendationSystem.csproj",
       "projectName": "RecommendationSystem",
-      "projectPath": "C:\\Users\\galnd\\source\\repos\\RecommendationSystem\\RecommendationSystem\\RecommendationSystem.csproj",
+      "projectPath": "C:\\Users\\galnd\\Desktop\\Reco\\Server\\RecommendationSystem\\RecommendationSystem.csproj",
       "packagesPath": "C:\\Users\\galnd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\galnd\\source\\repos\\RecommendationSystem\\RecommendationSystem\\obj\\",
+      "outputPath": "C:\\Users\\galnd\\Desktop\\Reco\\Server\\RecommendationSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

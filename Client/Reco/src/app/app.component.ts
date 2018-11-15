@@ -9,17 +9,18 @@ import {DataService, Rating, Recommendation, User} from "./data.service";
 })
 export class AppComponent implements OnInit {
 
-  ngOnInit(): void {
-    this.showUsers();
-    this.showRatings(null);
-  }
-
   title = 'Reco';
   users: User[];
   ratings: Rating[];
   recommendations: Recommendation[];
   currentUser: User;
+  similarityMeasures = ['Pearson', 'Euclidean'];
+  currentSimilarityMeasure = 'Pearson';
 
+  ngOnInit(): void {
+    this.showUsers();
+    this.showRatings(null);
+  }
 
   constructor(private dataService : DataService) {}
 
@@ -46,6 +47,7 @@ export class AppComponent implements OnInit {
 
   showRatingsForCurrentUser() {
 
+    if (!this.currentUser) { return; }
     this.dataService.getRatings(this.currentUser.userID)
       .subscribe((data: Rating[]) =>
       {
@@ -58,7 +60,7 @@ export class AppComponent implements OnInit {
 
   showRecommendations(userID) {
 
-    this.dataService.getRecommendations(userID)
+    this.dataService.getRecommendations(userID, this.currentSimilarityMeasure)
       .subscribe((data: Recommendation[]) =>
       {
         console.log("Recommendations:");

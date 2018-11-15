@@ -5,6 +5,15 @@
       <span> Welcome to {{ title }}!</span>
       <span class="spacer"></span>
       <span>
+         <mat-form-field >
+          <mat-select  (selectionChange)="showRatingsForCurrentUser()" placeholder="Similarity" [(value)]="currentSimilarityMeasure">
+            <mat-option  *ngFor="let sm of (similarityMeasures || null)" [value]="sm">
+              {{sm}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <span class="spacer"></span>
         <mat-form-field *ngIf="users" >
           <mat-select  (selectionChange)="showRatingsForCurrentUser()"placeholder="User" [(value)]="currentUser">
             <mat-option  *ngFor="let user of (users || null)" [value]="user">
@@ -38,7 +47,7 @@
       <!-- <ol>
          <li *ngFor="let rating of ratings" > {{ rating.filmName}} {{ rating.score}} {{ rating.userID}} </li>
        </ol> -->
-      <h2 class="mat-h2" *ngIf="currentUser">{{currentUser.name}}'s recommendations</h2>
+      <h2 class="mat-h2" *ngIf="currentUser">{{currentUser.name}}'s recommendations {{currentSimilarityMeasure}}</h2>
       <mat-card *ngFor="let recommendation of recommendations" class="example-card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>

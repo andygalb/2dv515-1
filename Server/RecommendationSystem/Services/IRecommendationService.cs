@@ -7,7 +7,7 @@ namespace RecommendationSystem
 {
     public interface IRecommendationService
     {
-        ICollection<WeightedSum> GetRecommendations(String userID, IUserService userService);
+        ICollection<WeightedSum> GetRecommendations(String userID, IUserService userService, SimilarityScore similarityScoreType);
     }
 
 }

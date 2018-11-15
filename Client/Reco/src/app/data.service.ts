@@ -29,12 +29,12 @@ export class DataService {
     return this.http.get<Rating[]>(this.url+'/api/rating/'+userID, httpOptions);
   }
 
-  getRecommendations(userID) {
+  getRecommendations(userID, similarityMeasure) {
     console.log("Called ");
-    return this.http.get<Recommendation[]>(this.url+'/api/recommendation/'+userID, httpOptions);
+    if(similarityMeasure === 'Pearson') { return this.http.get<Recommendation[]>(this.url+'/api/recommendation/pearson/'+userID, httpOptions);}
+    else {return this.http.get<Recommendation[]>(this.url+'/api/recommendation/euclidean/'+userID, httpOptions);}
+
   }
-
-
 
 
 }

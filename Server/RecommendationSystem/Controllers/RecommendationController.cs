@@ -25,7 +25,19 @@ namespace RecommendationSystem.Controllers
         [HttpGet("{id}")]
         public ActionResult Get(string id)
         {
-            return Json(recommendationService.GetRecommendations(id, userService));
+            return Json(recommendationService.GetRecommendations(id, userService, SimilarityScore.Pearson));
+        }
+
+        [HttpGet("euclidean/{id}")]
+        public ActionResult Euclidean(string id)
+        {
+            return Json(recommendationService.GetRecommendations(id, userService, SimilarityScore.Euclidean));
+        }
+
+        [HttpGet("pearson/{id}")]
+        public ActionResult Pearson(string id)
+        {
+            return Json(recommendationService.GetRecommendations(id, userService, SimilarityScore.Pearson));
         }
     }
 }

@@ -21,7 +21,7 @@ namespace RecommendationSystem
             ratings = new List<Rating>();
         }
 
-        public ICollection<WeightedSum> GetRecommendations(string userID, IUserService userService)
+        public ICollection<WeightedSum> GetRecommendations(string userID, IUserService userService, SimilarityScore similarityScoreType)
         {
             this.users = userService.GetUsers();
             this.ratings = userService.GetRatings(null);
@@ -46,8 +46,13 @@ namespace RecommendationSystem
             //Must remove all userA's ratings from ratings
             foreach (User u in users)
             {
-                //float answer = Euclidian(userA, u);
-                float answer = Pearson(userA, u);
+                float answer;
+                if(similarityScoreType==SimilarityScore.Pearson)
+                {
+                    answer = Pearson(userA, u);
+                }
+                else { answer = Euclidian(userA, u); }
+                
                 u.similarity = answer;
             }
 
@@ -240,6 +245,9 @@ namespace RecommendationSystem
     }
 
 }
+
+
+public enum SimilarityScore { Euclidean, Pearson }
 
 public class WeightedSum
 {
